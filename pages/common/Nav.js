@@ -1,22 +1,23 @@
-import Link from "next/link";
-import styles from "./styles/Nav.module.css";
-
 export default function Nav(){
   return (
-    <nav className={styles.nav}>
-      <ul>
-        <li className={styles.li}> <Link href='/'>메인</Link> </li>
-        <li className={styles.li}> <Link href='/basic/counter'>카운터</Link> </li>
-        <li className={styles.li}> <Link href='/basic/calc'>계산기</Link> </li>
-        <li className={styles.li}> <Link href='/basic/bmi'>BMI</Link> </li>
-        <li className={styles.li}> <Link href='/todo/todo'>투두리스트</Link> </li>
-        <li className={styles.li}> <Link href='/board/board'>게시글등록</Link> </li>
-        <li className={styles.li}> <Link href='/board/board-list'>게시글목록</Link> </li>
-        <li className={styles.li}> <Link href='/user/join'>회원가입</Link> </li>
-        <li className={styles.li}> <Link href='/user/login'>로그인</Link> </li>
-        <li className={styles.li}> <Link href='/user/user-list'>사용자목록</Link> </li>
+    <header className={"navbar navbar-expand-lg navbar-light bg-light"}>
+      <ul className={"nav"}>
+        <li className={"nav-item"}>
+          <a className="nav-link h4" href="/">Home</a>
+        </li>
       </ul>
-    </nav>
+      <ul className={"nav navbar-right"}>
+        <li className={"nav-item"}>
+          <a className={"nav-link h4"} href="/user/join">Join</a>
+        </li>
+        <li className={"nav-item"}>
+          <a className={"nav-link h4"} href="/user/login">Login</a>
+        </li>
+        <li className={"nav-item"}>
+          <a className="nav-link h4" href="/board/board">Board</a>
+        </li>
+      </ul>
+    </header>
   );
 }
 
