@@ -46,8 +46,8 @@ export default function Join(){
 				</tr>
 			</tbody>
 		</table>
-		<div class="col-auto">
-			<button type="submit" class="btn btn-primary auto">
+		<div className="col-auto">
+			<button type="submit" className="btn btn-primary auto">
 				Sign Up
 			</button>
 		</div>

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-export default function login () {
+const Login = () => {
 	const [email, setEmail] = useState("");
 	const [password, setPassword] = useState("");
 
@@ -21,20 +21,22 @@ export default function login () {
 			<h2 className="bd-title" id="content">Login</h2>
 		</div>
 		<br/>
-		<form class="row g-3">
-			<div class="col-auto">
-				<label for="staticEmail2" class="visually-hidden">Email</label>
-				<input type="text" class="form-control" id="staticEmail2" placeholder="name@example.com" value={email} onChange={emailHandler} />
+		<form className="row g-3">
+			<div className="col-auto">
+				<label htmlFor="staticEmail2" className="visually-hidden">Email</label>
+				<input type="text" className="form-control" id="staticEmail2" placeholder="name@example.com" value={email} onChange={emailHandler} />
 			</div>
-			<div class="col-auto">
-				<label for="inputPassword2" class="visually-hidden">Password</label>
-				<input type="password" class="form-control" id="inputPassword2" placeholder="Password" value={password} onChange={passwordHandler} />
+			<div className="col-auto">
+				<label htmlFor="inputPassword2" className="visually-hidden">Password</label>
+				<input type="password" className="form-control" id="inputPassword2" placeholder="Password" value={password} onChange={passwordHandler} />
 			</div>
-			<div class="col-auto">
-				<button type="submit" class="btn btn-primary mb-3" onClick={submitHandler}>
+			<div className="col-auto">
+				<button type="submit" className="btn btn-primary mb-3" onClick={submitHandler}>
 					Sign In 
 				</button>
 			</div>
 		</form>
 	</div>
 }
+
+export default Login;
