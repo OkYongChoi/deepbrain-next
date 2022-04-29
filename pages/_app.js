@@ -1,17 +1,18 @@
-import React from "react";
 import Head from "next/head";
-import Nav from "./common/Nav";
 import 'bootstrap/dist/css/bootstrap.min.css';
+import React from "react";
+import { wrapper } from '../redux/store.ts';
+import HeaderComponent from "./common/nav";
 
-const App = ({ Component, pageProps }) => {
+function MyApp({ Component, pageProps }) {
   return (
     <>
       <Head>
-        <title>Finance</title>
+        <title>My Next App</title>
       </Head>
-        <Nav />
-      <div className="container">
-        <Component {...pageProps} />
+       <HeaderComponent />
+      <div className="container-fluid">
+          <Component {...pageProps} />
       </div>
       <footer>
 
@@ -20,4 +21,4 @@ const App = ({ Component, pageProps }) => {
   )
 }
 
-export default App
+export default wrapper.withRedux(MyApp)
